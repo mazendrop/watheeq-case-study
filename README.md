@@ -34,14 +34,16 @@ etwa 1,6 s auf 0,25 s (Faktor 6,6), bei nachweislich identischen Ergebnissen fü
 
 ## Screenshots
 
-*A fictional demo office on the test environment. Party names, phone and ID numbers are blurred anyway.*
+*The current version (25 November 2026) with a fictional demo office on the test environment. Party names, phone and ID numbers are blurred anyway.*
 
 | | |
 |---|---|
-| ![Case file](screenshots/case-file.png) | ![AI draft on the office letterhead](screenshots/ai-draft-letterhead.png) |
-| **Case file:** parties, court levels, requests and the team in one place. | **AI draft** from the office's own templates, on its letterhead. Missing facts stay as visible blanks and are listed on the left instead of being invented. |
-| ![Office dashboard](screenshots/office-dashboard.png) | ![Finance performance](screenshots/finance-performance.png) |
-| **Office dashboard:** workload per team member, collections in ₪ / JD / $, upcoming instalments. | **Finance:** fees, case expenses and office expenses per period and currency. |
+| ![Today](screenshots/dashboard.png) | ![Case file](screenshots/case-file.png) |
+| **Today:** the day's court sessions on a timeline, cases that need attention, sessions waiting for review. | **Case file:** parties, court and level, requests and team, with one-click WhatsApp, AI drafting and printing. |
+| ![Document on the office letterhead](screenshots/document-letterhead.png) | ![Templates and drafts](screenshots/templates.png) |
+| **Documents** from the office's own templates, on its letterhead, as Word and PDF. | **Templates and drafts:** ready templates, the office archive, and AI drafting. |
+| ![Finance](screenshots/finance.png) | ![Reports](screenshots/reports.png) |
+| **Finance:** money received, overdue instalments, client balances and money held in trust, in ₪ and JD. | **Reports:** the period summed up in plain sentences, with figures per currency. |
 
 ## The problem
 
@@ -130,7 +132,7 @@ Arabic typesetting. The same document has to come out the same in every output p
 
 - **Drafting (Claude API):** drafts start from the office's own templates and similar documents in its
   archive (semantic search inside the office's own data only). Facts the case file does not contain stay as
-  visible blanks and are listed for the lawyer (see the screenshot) instead of being guessed.
+  visible blanks and are listed for the lawyer instead of being guessed.
 - **OCR (Gemini API):** reads ID cards and court papers into structured fields.
 - **Points-based usage:** each AI action costs points, so usage and cost per office stay predictable.
 - When an AI call fails, the user gets the actual reason in Arabic, not a generic "something went wrong".
